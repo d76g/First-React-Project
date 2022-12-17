@@ -5,8 +5,8 @@ import data from './data'
 function Portfolio() {
     const [item, setItem] = useState(data);
     const filterItem = (cateItem) => {
-        const updateItem = data.filterItem((currElement) => {
-            return currElement.category === cateItem;
+        const updateItem = data.filter((currElement) => {
+            return currElement.category == cateItem;
         })
         setItem(updateItem)
     }
@@ -36,7 +36,7 @@ function Portfolio() {
                             return(
                                 <div className="box" key={id}>
                                     <div className="img">
-                                        <img src={cover} alt="" />
+                                        <img src={cover} alt="UI Images" />
                                     </div>
                                     <div className="overlay">
                                         <h1>{title}</h1>
